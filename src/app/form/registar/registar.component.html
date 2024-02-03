@@ -1,0 +1,70 @@
+<div class="container-fluid my-3">
+    <form action="" class="form-group mx-auto" [formGroup]="userForm">
+        <h2 class="text-center">Registration</h2>
+        <h4 class="text-center mt-2">User Details</h4>
+        <!-- ngbtypeAhead -->
+        <div class="row">
+            <div class="col mb-3 mt-5">
+                <label for="Username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username"  formControlName="username">
+            </div>
+            <div class="col mb-3 mt-5">
+                <label for="Username" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email"  formControlName="email">
+            </div>
+            <div class="col mb-3 mt-5">
+                <label for="Username" class="form-label">Password</label>
+                <input type="text" class="form-control" id="pwd"  formControlName="password">
+            </div>
+            
+        <button (click)="submit()">submit</button>
+        </div>
+    </form>
+    {{userForm.value | json}}
+</div>
+
+<!-- 
+<div class="col">
+                <input type="text" formControlName="email" id="email">   
+            </div>
+            <div class="col">
+                <input type="text" formControlName="password" id="pwd">   
+            </div>
+
+
+    <form class="mx-auto" [formGroup]="createUser">
+            <h2 class="text-center">Registration</h2>
+            <h4 class="text-center mt-2">User Details</h4>
+            <div class="mb-3 mt-5">
+              <label for="Username" class="form-label">Username</label>
+              <input type="text" class="form-control" id="Username"  formControlName="username">
+            </div>
+            <div class="mb-3">
+              <label for="guardianEmail" class="form-label">Email</label>
+              <input type="text" class="form-control" id="email"  formControlName="email">
+          </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label ">Password</label>
+              <input type="password" class="form-control" id="userPassword"  formControlName="password">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label ">Contact Number</label>
+              <input type="number" class="form-control" id="phoneNuber"  formControlName="phoneNumber">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label ">Location</label>
+              <input type="text" class="form-control" id="userLocation"  formControlName="userLocation">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Pincode</label>
+                <input type="number" class="form-control" id="pincode" formControlName="pincode">
+            </div>
+            <a [routerLink]="['/login']">
+              <button type="submit" class="btn btn-primary mt-3" >Registar</button>
+            </a>
+          </form>
+ -->
+<!-- 
+                <input type="text" formControlName="email" id="email">
+
+                <input type="password" formControlName="password" id="pwd"> -->

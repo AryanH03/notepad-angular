@@ -1,0 +1,34 @@
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class=" navbar-nav  nav-underline fs-3 m-3 border-bottom flex-row  justify-content-between" (activeIdChange)="getBlogByCategory($event)">
+    <li>
+        <ng-template ngbNavContent>
+          <div class="blogs" id="blogs">
+            
+            <div class=" row m-0 justify-content-center ">
+        
+              <div class="blog-box col-lg-4 col-10 border-end " *ngFor="let note of notes">
+                <div class=" d-flex flex-column mb-3">
+                  <div class="p-2 row m-0">
+                    <h3 class="col-6 ">{{note.note_title}}</h3><a class="col-6 text-end" [routerLink]='["/blogs",blog.slug]' href="blogs.html"><i
+                        class=" fa-2x fa-solid  fa-arrow-up-right-from-square" style="color: #000000; "></i></a>
+                  </div>
+                  <div class="p-2">
+                    <p class="p-2">
+                      {{note.note_desc}}
+                    </p>
+                    <div class="row">
+                      <i class="fa-solid fa-portrait col-1"></i>
+                      <span class="col">{{note.written_at | date:'fullDate'}}</span>
+                    </div>
+                    
+                    </div>
+        
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </ng-template>
+    </li>
+</ul>

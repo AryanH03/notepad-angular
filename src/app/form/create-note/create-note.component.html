@@ -1,0 +1,24 @@
+<div class="container-fluid my-3">
+    <form action="" class="form-group mx-auto" [formGroup]="userForm">
+        <h2 class="text-center">Add Note</h2>
+        <!-- ngbtypeAhead -->
+        <div class="row">
+            <div class="col mb-3 mt-5">
+                <label for="Title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title"  formControlName="title">
+            </div>
+            <div class="col mb-3 mt-5">
+                <label for="Description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="description"  formControlName="description">
+            </div>
+            <div class="col mb-3 mt-5">
+                <label for="User_id" class="form-label">Enter User_id</label>
+                <input type="number" class="form-control" id="user_id"  formControlName="user_id">
+            </div>
+            
+            
+        <button (click)="submit()">submit</button>
+        </div>
+    </form>
+    {{userForm.value | json}}
+</div>
